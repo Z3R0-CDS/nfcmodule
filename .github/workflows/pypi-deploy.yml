@@ -28,7 +28,7 @@ jobs:
       - name: Publish package to PyPI
         run: python -m twine upload --repository-url https://upload.pypi.org/legacy/ dist/*
         env:
-          TWINE_USERNAME: ${{ secrets.PYPI_USER }} 
+          TWINE_USERNAME: __token__
           TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
 
       - name: Include README in distribution
